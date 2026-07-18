@@ -1,0 +1,4 @@
+.venv/
+scripts/source-prepped.png
+__pycache__/
+*.pyc

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 529 266" width="529" height="266" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<rect x="0.5" y="0.5" width="528" height="265" rx="10" fill="#0d1117" stroke="#30363d"/>
+<circle cx="28" cy="20.0" r="6" fill="#ff5f56"/>
+<circle cx="46" cy="20.0" r="6" fill="#ffbd2e"/>
+<circle cx="64" cy="20.0" r="6" fill="#27c93f"/>
+<line x1="0" y1="40" x2="529" y2="40" stroke="#30363d"/>
+<text x="28" y="64" font-size="16" font-weight="bold" fill="#58a6ff">kiruthick01@github</text>
+<line x1="28" y1="68" x2="501" y2="68" stroke="#484f58"/>
+<g opacity="0" transform="translate(-16,0)">
+<text x="28" y="96" font-size="14" font-weight="bold" fill="#7ee787">Now:</text><text x="130.0" y="96" font-size="14" fill="#c9d1d9">CS @ Chennai Institute of Technology</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.0s" dur="0.4s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-16 0" to="0 0" begin="0.0s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+</g>
+<g opacity="0" transform="translate(-16,0)">
+<text x="28" y="128" font-size="14" font-weight="bold" fill="#7ee787">Prev:</text><text x="130.0" y="128" font-size="14" fill="#c9d1d9">Full Stack Dev Intern @ ATPAR UI Technology</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.4s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-16 0" to="0 0" begin="0.25s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+</g>
+<g opacity="0" transform="translate(-16,0)">
+<text x="28" y="160" font-size="14" font-weight="bold" fill="#7ee787">Stack:</text><text x="130.0" y="160" font-size="14" fill="#c9d1d9">Python · Next.js · Solidity · FastAPI</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.4s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-16 0" to="0 0" begin="0.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+</g>
+<g opacity="0" transform="translate(-16,0)">
+<text x="28" y="192" font-size="14" font-weight="bold" fill="#7ee787">Highlights:</text><text x="130.0" y="192" font-size="14" fill="#c9d1d9">Marine Ecosystem Monitoring System</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.4s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-16 0" to="0 0" begin="0.75s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+</g>
+<rect x="28" y="222" width="16" height="16" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
+<rect x="50" y="222" width="16" height="16" rx="3" fill="#f85149" stroke="#30363d" stroke-width="0.5"/>
+<rect x="72" y="222" width="16" height="16" rx="3" fill="#3fb950" stroke="#30363d" stroke-width="0.5"/>
+<rect x="94" y="222" width="16" height="16" rx="3" fill="#d29922" stroke="#30363d" stroke-width="0.5"/>
+<rect x="116" y="222" width="16" height="16" rx="3" fill="#58a6ff" stroke="#30363d" stroke-width="0.5"/>
+<rect x="138" y="222" width="16" height="16" rx="3" fill="#bc8cff" stroke="#30363d" stroke-width="0.5"/>
+<rect x="160" y="222" width="16" height="16" rx="3" fill="#39c5cf" stroke="#30363d" stroke-width="0.5"/>
+<rect x="182" y="222" width="16" height="16" rx="3" fill="#c9d1d9" stroke="#30363d" stroke-width="0.5"/>
+</svg>
