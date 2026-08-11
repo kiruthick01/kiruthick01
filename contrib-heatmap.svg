@@ -507,7 +507,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.306s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="246.9" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>33 contributions on 2025-11-16</title></rect>
+<rect x="246.9" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-11-16</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.252s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.252s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -517,7 +517,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.264s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="246.9" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#26a641"><title>15 contributions on 2025-11-18</title></rect>
+<rect x="246.9" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-11-18</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.276s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.276s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -567,17 +567,17 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.318s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="262.1" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>24 contributions on 2025-11-28</title></rect>
+<rect x="262.1" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#26a641"><title>15 contributions on 2025-11-28</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.33s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.33s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="262.1" y="113.2" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>3 contributions on 2025-11-29</title></rect>
+<rect x="262.1" y="113.2" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-11-29</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.342s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.342s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="277.3" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>24 contributions on 2025-11-30</title></rect>
+<rect x="277.3" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-11-30</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.288s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.288s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -597,12 +597,12 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.324s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="277.3" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>6 contributions on 2025-12-04</title></rect>
+<rect x="277.3" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>3 contributions on 2025-12-04</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.336s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.336s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="277.3" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>6 contributions on 2025-12-05</title></rect>
+<rect x="277.3" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>3 contributions on 2025-12-05</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.348s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.348s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -612,12 +612,12 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.36s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="292.5" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>2 contributions on 2025-12-07</title></rect>
+<rect x="292.5" y="22.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-07</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.306s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.306s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="292.5" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2025-12-08</title></rect>
+<rect x="292.5" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-08</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.318s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.318s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -637,7 +637,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.354s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="292.5" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>3 contributions on 2025-12-12</title></rect>
+<rect x="292.5" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-12</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.366s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.366s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -652,12 +652,12 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.324s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="307.7" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>4 contributions on 2025-12-15</title></rect>
+<rect x="307.7" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-15</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.336s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.336s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="307.7" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>2 contributions on 2025-12-16</title></rect>
+<rect x="307.7" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-16</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.348s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.348s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -672,7 +672,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.372s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="307.7" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>38 contributions on 2025-12-19</title></rect>
+<rect x="307.7" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-19</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.384s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.384s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -692,7 +692,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.354s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="322.9" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>6 contributions on 2025-12-23</title></rect>
+<rect x="322.9" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-23</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.366s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.366s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -722,7 +722,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.36s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="338.2" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2025-12-29</title></rect>
+<rect x="338.2" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2025-12-29</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.372s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.372s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -847,7 +847,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.462s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="383.8" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2026-01-23</title></rect>
+<rect x="383.8" y="98.0" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-01-23</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.474s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.474s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -877,7 +877,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.468s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="399.0" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>2 contributions on 2026-01-29</title></rect>
+<rect x="399.0" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-01-29</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.48s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -1497,7 +1497,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.768s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="672.7" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>2 contributions on 2026-06-02</title></rect>
+<rect x="672.7" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-06-02</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.78s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.78s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -1707,12 +1707,12 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.876s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="764.0" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>3 contributions on 2026-07-14</title></rect>
+<rect x="764.0" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2026-07-14</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.888s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.888s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="764.0" y="67.6" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2026-07-15</title></rect>
+<rect x="764.0" y="67.6" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-07-15</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.9s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -1747,7 +1747,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.906s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="779.2" y="67.6" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>4 contributions on 2026-07-22</title></rect>
+<rect x="779.2" y="67.6" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>1 contributions on 2026-07-22</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.918s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.918s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -1787,7 +1787,7 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.936s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="794.4" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>27 contributions on 2026-07-30</title></rect>
+<rect x="794.4" y="82.8" width="11.9" height="11.9" rx="2.4" fill="#39d353"><title>26 contributions on 2026-07-30</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.948s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.948s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
@@ -1842,9 +1842,14 @@
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.936s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <g opacity="0" transform="translate(-6,-6)">
-<rect x="824.8" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-08-10</title></rect>
+<rect x="824.8" y="37.2" width="11.9" height="11.9" rx="2.4" fill="#0e4429"><title>5 contributions on 2026-08-10</title></rect>
 <animate attributeName="opacity" from="0" to="1" begin="0.948s" dur="0.35s" fill="freeze"/>
 <animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.948s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+</g>
+<g opacity="0" transform="translate(-6,-6)">
+<rect x="824.8" y="52.4" width="11.9" height="11.9" rx="2.4" fill="#161b22"><title>0 contributions on 2026-08-11</title></rect>
+<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-6 -6" to="0 0" begin="0.96s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
 </g>
 <text x="680.8" y="146.5" font-size="10" fill="#8b98a5">Less</text>
 <rect x="712.8" y="136.6" width="11.9" height="11.9" rx="2.4" fill="#161b22"/>
@@ -1854,5 +1859,5 @@
 <rect x="772.3" y="136.6" width="11.9" height="11.9" rx="2.4" fill="#39d353"/>
 <rect x="787.1" y="136.6" width="11.9" height="11.9" rx="2.4" fill="#69f0a0"/>
 <text x="806.0" y="146.5" font-size="10" fill="#8b98a5">More</text>
-<text x="34" y="172.5" font-size="12" fill="#484f58">342 contributions in the last year</text>
+<text x="34" y="172.5" font-size="12" fill="#484f58">188 contributions in the last year</text>
 </svg>
