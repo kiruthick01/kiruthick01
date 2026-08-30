@@ -2,8 +2,6 @@
 
 ### `kiruthick01@github ~ $ ./contributions.sh`
 
-<img src="contrib-heatmap.svg" width="860" alt="Contribution heatmap" />
-
 <br>
 <br>
 
