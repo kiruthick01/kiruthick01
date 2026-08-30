@@ -1,10 +1,5 @@
 <div align="center">
 
-### `kiruthick01@github ~ $ ./contributions.sh`
-
-<br>
-<br>
-
 ### `kiruthick01@github ~ $ whoami`
 
 <table>
