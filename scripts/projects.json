@@ -1,0 +1,692 @@
+[
+ {
+  "id": "tadro",
+  "title": "Terrain-Aware Flood Risk Simulation",
+  "oneLiner": "Interactive flood simulator for a real Chennai neighborhood, on real terrain and rainfall data.",
+  "category": "Research",
+  "status": "Shipped",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "rasterio/GDAL",
+   "WhiteboxTools",
+   "imdlib",
+   "React",
+   "MapLibre + deck.gl"
+  ],
+  "repo": "https://github.com/kiruthick01/terrain-aware-drainage-route-optimization.git",
+  "liveUrl": "https://kiruthick01.github.io/terrain-aware-drainage-route-optimization/",
+  "problem": "Rigorous flood models (HEC-RAS 2D) take hours per run inside desktop GIS tools, and hazard maps only answer one static question, so nobody can ask 'what if it rains 250mm tomorrow?' and get an answer in under a second.",
+  "approach": "A simplified terrain-based fill-and-spill hydraulic proxy runs over a real SRTM DEM and IMD rainfall record for Velachery, with precomputed scenario rasters blended client-side, architected so a real HEC-RAS 2D engine can later replace the proxy without touching the rest of the pipeline.",
+  "impact": [
+   {
+    "label": "Depression capacity filled at 2015 rainfall peak",
+    "value": "96%",
+    "note": "measured: 11.37 of 11.87 Mm³ terrain storage consumed by the actual Dec 2015 350mm event, used as a plausibility check rather than an extent validation"
+   },
+   {
+    "label": "What-if query latency",
+    "value": "well under 1 ms",
+    "note": "measured via precomputed rasters + per-cell interpolation, e.g. 0.09 ms for a 125mm interpolated query"
+   },
+   {
+    "label": "Zone flooded, extreme scenario (250mm)",
+    "value": "20.0%",
+    "note": "proxy hydraulics output, not HEC-RAS-grade extent"
+   },
+   {
+    "label": "Grid resolution",
+    "value": "250 x 187 cells @ 30.3 m",
+    "note": "SRTM 30m DEM reprojected to EPSG:32644"
+   }
+  ],
+  "honestLimit": "Uses simplified proxy hydraulics, not HEC-RAS — no overland flow between depressions, no time dynamics, and no engineering-grade depth; real extent validation against 2015 imagery is deferred to the still-pending HEC-RAS track.",
+  "research": true,
+  "featured": true
+ },
+ {
+  "id": "tvbao",
+  "title": "Thermal Vision-Based Airflow Optimization",
+  "oneLiner": "ESP32 + thermal-camera HVAC controller, simulation-validated then confirmed working on real hardware.",
+  "category": "Embedded",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "ESP32 (PlatformIO)",
+   "MLX90640/AMG8833",
+   "I2S + ILI9341 display",
+   "MQTT",
+   "NumPy MLP",
+   "Python simulation"
+  ],
+  "repo": "https://github.com/kiruthick01/Thermal-Vision-Based-Airflow-Optimization.git",
+  "liveUrl": null,
+  "problem": "HVAC systems condition rooms uniformly instead of tracking where occupants actually are, wasting energy on empty space and reacting slowly to real thermal drift.",
+  "approach": "A thermal camera behind a single swappable ThermalSensor interface feeds hotspot detection and a NumPy drift-forecasting model, which drives pan/tilt servo tracking and setpoint decisions over MQTT — validated first entirely in simulation, then re-verified on real AMG8833 hardware with zero logic changes.",
+  "impact": [
+   {
+    "label": "Simulated energy reduction",
+    "value": "24%",
+    "note": "Mean of runs, std 9.6%. Simulation vs static thermostat, not measured in a building."
+   },
+   {
+    "label": "Hotspot detection F1 (AMG8833)",
+    "value": "0.698",
+    "note": "measured: precision 1.000, recall 0.536 — precision near-perfect but recall below the ~90% target stated in the project plan"
+   },
+   {
+    "label": "Hotspot detection F1 (MLX90640)",
+    "value": "0.807",
+    "note": "measured: precision 0.997, recall 0.678, same simulated eval"
+   },
+   {
+    "label": "Drift model test error",
+    "value": "MAE 0.1566 C, RMSE 0.2344 C",
+    "note": "measured on held-out test set, NumPy MLP"
+   }
+  ],
+  "honestLimit": "Only the AMG8833 build is physically wired and hardware-confirmed (MLX90640 firmware is untested on real hardware), and measured hotspot recall/F1 fall short of the ~90% accuracy figure quoted elsewhere in the project's own docs.",
+  "research": false,
+  "featured": true
+ },
+ {
+  "id": "universal-prompts",
+  "title": "Universal Prompts",
+  "oneLiner": "Guardrail-heavy prompt templates for autonomous, honest GitHub contribution and code-review agents.",
+  "category": "Tooling",
+  "status": "Shipped",
+  "year": "2026",
+  "stack": [
+   "Prompt templates",
+   "GitHub CLI workflow",
+   "Claude Code agent instructions"
+  ],
+  "repo": null,
+  "liveUrl": null,
+  "problem": "Turning an LLM loose on real GitHub accounts and repositories risks spam PRs, gamed achievements, and misrepresented AI authorship if the instructions don't explicitly forbid it.",
+  "approach": "Two long instruction files constrain an agent to legitimate GitHub activity only: one for account achievements (audit-only, hard 'no gaming' rules), one for finding and fixing real, independently verifiable bugs in open-source repos with strict attribution rules.",
+  "impact": [
+   {
+    "label": "Template files",
+    "value": "2 files, 874 lines total",
+    "note": "github-achievments.txt (278 lines) + open-source_code_review.txt (596 lines)"
+   },
+   {
+    "label": "Explicit guardrails",
+    "value": "hard rule lists banning spam PRs/issues and AI co-authorship",
+    "note": "stated directly in both files"
+   }
+  ],
+  "honestLimit": "These are instruction/prompt files, not executable software — there are no automated tests or measured outcomes tracked in the files themselves.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "aquanexus",
+  "title": "AquaNexus",
+  "oneLiner": "A river habitat model that measures, and reports, exactly how far it can be trusted on a river it never saw.",
+  "category": "AI/ML",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "HEC-RAS 7.0 (COM)",
+   "scikit-learn (Ridge)",
+   "FastAPI",
+   "React + TypeScript",
+   "SHAP"
+  ],
+  "repo": "https://github.com/kiruthick01/AquaNexus.git",
+  "liveUrl": null,
+  "problem": "River-habitat models are usually reported as a single accuracy score with no honest account of where they stop working, and errors found after publication are usually quietly fixed rather than disclosed.",
+  "approach": "Bathymetric point clouds feed HEC-RAS hydraulics, which feed two trained models (real dissolved-oxygen labels and synthetic habitat-index labels) behind an explainable API and dashboard, then the finished model — unchanged — is scored against a second river held out from day one.",
+  "impact": [
+   {
+    "label": "Dissolved-oxygen model R2 (cross-validated)",
+    "value": "0.394",
+    "note": "corrected from an originally published 0.442 after removing 4 defective cross-sections; beats a 'same as last reading' baseline (0.385 R2) by only 0.009"
+   },
+   {
+    "label": "Zero-shot transfer to held-out river, in-range",
+    "value": "R2 +0.336",
+    "note": "measured on 129 in-range observations, vs +0.394 at home; collapses to -0.903 on 63 out-of-range observations (192 obs total, 5 stations)"
+   },
+   {
+    "label": "Test suite",
+    "value": "485 backend + 33 frontend tests",
+    "note": "from README badge"
+   },
+   {
+    "label": "Retracted finding",
+    "value": "temp x discharge synergy -1.02 mg/L retracted to +0.23 mg/L",
+    "note": "originally computed on one station's 48 rows; sign reverses when pooled over all 138"
+   }
+  ],
+  "honestLimit": "The real dissolved-oxygen model only barely beats a naive persistence baseline (0.394 vs 0.385 R2), and the synthetic habitat-index model (R2 0.993) is explicitly stated to measure function recovery, not ecological skill.",
+  "research": true,
+  "featured": true
+ },
+ {
+  "id": "brute32",
+  "title": "brute32",
+  "oneLiner": "ESP32-S3 wireless security research platform: WiFi/BLE attack primitives verified on real hardware.",
+  "category": "Security",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "ESP-IDF (C)",
+   "ESP32-S3",
+   "NimBLE",
+   "raw 802.11 frame injection",
+   "FATFS/SDSPI",
+   "esp_console"
+  ],
+  "repo": "https://github.com/kiruthick01/brute32",
+  "liveUrl": null,
+  "problem": "Existing ESP32 wireless-attack toolkits (esp32-wifi-penetration-tool, Marauder) couple every capability to a shared webserver blob, making individual primitives hard to verify or reuse in isolation.",
+  "approach": "A from-scratch rebuild on ESP-IDF 5.3.x/ESP32-S3, restructured into independent, typed components (WiFi control, frame analysis, BLE, GPS, storage) tested one at a time over a serial console before any UI layer is added.",
+  "impact": [
+   {
+    "label": "Hardware-confirmed WiFi primitives",
+    "value": "scan, deauth, handshake capture, save/list",
+    "note": "Phase 1, confirmed on real hardware; PMKID capture works mechanically but is unproven against a PMKID-capable target"
+   },
+   {
+    "label": "GPS fix parsing",
+    "value": "live NMEA parse + real satellite fix verified",
+    "note": "deg->decimal, date/time, empty-field handling all confirmed on hardware"
+   },
+   {
+    "label": "BLE device fingerprinting",
+    "value": "blescan/bledevices hardware-confirmed",
+    "note": "real AD byte capture; blespam payloads mechanically clean but not yet confirmed against a real iPhone"
+   },
+   {
+    "label": "microSD wardriving",
+    "value": "code complete, build-clean, mount unverified",
+    "note": "blocked by a faulty SD test module, not firmware, per DEVLOG.md"
+   }
+  ],
+  "honestLimit": "Captive-portal credential capture and BLE popup-triggering are unconfirmed end-to-end on real devices, and Phase 5 (on-device display/UI) has not been started.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "deburger",
+  "title": "Deburger",
+  "oneLiner": "VS Code extension that explains real ESLint/tsc/runtime findings in plain English, and never writes code.",
+  "category": "Tooling",
+  "status": "Shipped",
+  "year": "2026",
+  "stack": [
+   "TypeScript",
+   "VS Code Extension API",
+   "ESLint Linter API",
+   "TypeScript Compiler API",
+   "Babel AST",
+   "Debug Adapter Protocol"
+  ],
+  "repo": "https://github.com/kiruthick01/Deburger.git",
+  "liveUrl": null,
+  "problem": "Most 'AI code assistants' either generate unrequested code or reimplement a weaker version of tools like ESLint that already solve the underlying analysis problem well.",
+  "approach": "Calls ESLint's Linter API and the real TypeScript compiler directly for static findings, watches live debug sessions via the Debug Adapter Protocol for real runtime exceptions, and feeds both into an LLM prompt that is constrained to explain, never generate, code.",
+  "impact": [
+   {
+    "label": "Test suite",
+    "value": "124/124 passing",
+    "note": "10 suites, from README's own npm test run"
+   },
+   {
+    "label": "Demo analysis run",
+    "value": "22 issues found (4 errors, 17 warnings, 1 info)",
+    "note": "real run against the bundled demo-project"
+   },
+   {
+    "label": "Packaged extension",
+    "value": "~10MB, 3849 files",
+    "note": "verified working .vsix; unbundled node_modules since no bundler is configured yet"
+   }
+  ],
+  "honestLimit": "No bundler is configured, so the packaged .vsix ships ESLint/TypeScript/Babel unbundled — functional but larger than necessary; sidebar/panel screenshots require a live VS Code window and aren't included.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "easy-ras",
+  "title": "EasyRAS (RAS Copilot)",
+  "oneLiner": "Planned COM-automation wrapper to simplify HEC-RAS's UI; currently a sourced feature catalog, no app yet.",
+  "category": "Tooling",
+  "status": "In development",
+  "year": "2026",
+  "stack": [
+   "Python (planned)",
+   "pywin32/pythonnet",
+   "HEC-RAS COM API"
+  ],
+  "repo": "https://github.com/kiruthick01/EasyRAS",
+  "liveUrl": null,
+  "problem": "HEC-RAS's native UI spreads related settings across many disconnected editors (Geometry, Flow, 2D Areas, Structures, Plan/Run Manager), so newcomers struggle to find the right field for a given task.",
+  "approach": "The plan is a COM-automation wrapper that replaces only the interaction layer, never the underlying feature set, gated on a Phase 0 rule that every UI field in the catalog must be verified against the official HEC-RAS manuals rather than recalled from memory.",
+  "impact": [
+   {
+    "label": "Feature catalog built so far",
+    "value": "11,422 lines (docs/feature_catalog.json)",
+    "note": "Phase 0 catalog of HEC-RAS UI fields, sourced from official manuals per the project's own research rules"
+   },
+   {
+    "label": "Application code",
+    "value": "none yet",
+    "note": "repository currently contains only the project plan and the Phase 0 catalog — no bridge or UI implemented"
+   }
+  ],
+  "honestLimit": "No working software exists yet — only the project plan and a Phase 0 HEC-RAS feature catalog; the COM-automation bridge and UI described in the plan are unbuilt.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "flogravity",
+  "title": "FloGravity",
+  "oneLiner": "Hydraulically-constrained least-cost path for a gravity-fed drainage line, over any DEM.",
+  "category": "Research",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "rasterio",
+   "pysheds",
+   "scikit-image",
+   "NumPy",
+   "custom Dijkstra"
+  ],
+  "repo": "https://github.com/kiruthick01/FloGravity.git",
+  "liveUrl": null,
+  "problem": "A generic hiking-trail least-cost path only avoids steep terrain, but a gravity-fed drainage channel also needs a minimum continuous downhill grade, a hard maximum grade, and a real cost for crossing an existing drainage channel head-on.",
+  "approach": "A DEM-to-route pipeline (reprojection, slope/aspect, pysheds conditioning, D8 flow accumulation) feeds a custom anisotropic Dijkstra router that penalizes perpendicular channel crossings more than parallel ones, built as a scoped warm-up for a larger multi-inlet capstone (TADRO).",
+  "impact": [
+   {
+    "label": "Slope calculation validated",
+    "value": "checked against the exact analytic constant",
+    "note": "pytest suite, synthetic tilted-plane test"
+   },
+   {
+    "label": "Sample DEM tested end-to-end",
+    "value": "Texas DEM, ~360x370 cells, 147-298m elevation",
+    "note": "real DEM via pysheds' own sample data"
+   },
+   {
+    "label": "Anisotropic routing",
+    "value": "custom 8-connected Dijkstra with directional channel-crossing penalty",
+    "note": "documented as the key difference from a standard least-cost-path tutorial"
+   }
+  ],
+  "honestLimit": "No validation yet against a real constructed drainage line, and no multi-objective or multi-inlet network routing — both stated explicitly as stretch goals not implemented here, reserved for the TADRO capstone.",
+  "research": true,
+  "featured": false
+ },
+ {
+  "id": "gnatsonic",
+  "title": "GnatSonic",
+  "oneLiner": "Two ESP32 boards exchanging data over near-ultrasonic sound, no WiFi or Bluetooth — an air-gap covert channel demo.",
+  "category": "Embedded",
+  "status": "In development",
+  "year": "2026",
+  "stack": [
+   "ESP32 (I2S)",
+   "MAX98357A DAC",
+   "INMP441 mic",
+   "Python (spectral analysis)",
+   "Goertzel detector",
+   "BFSK"
+  ],
+  "repo": "https://github.com/kiruthick01/GnatSonic.git",
+  "liveUrl": null,
+  "problem": "Air-gap covert channels — moving data between computers with no network link at all — are a documented real attack class (e.g. the MOSQUITO paper), worth understanding hands-on rather than only reading about.",
+  "approach": "Phase 0 tooling only so far: ESP32 firmware plays a 15-22kHz sine sweep through an I2S DAC and speaker, and a Python script records it back, plots a spectrogram, and reports per-band SNR — gating every later phase (modem, framing, reliability) on real measured hardware data instead of assumed specs.",
+  "impact": [
+   {
+    "label": "Development phase",
+    "value": "Phase 0 of 7",
+    "note": "tooling built and pushed; physical hardware validation has not happened yet, per README"
+   },
+   {
+    "label": "Reference prior art",
+    "value": "MOSQUITO covert channel (Guri et al., IEEE DSC 2018)",
+    "note": "cited demonstration of ultrasonic data transfer up to 9m between air-gapped PCs"
+   },
+   {
+    "label": "Design risk mitigation",
+    "value": "piezo buzzer swapped for I2S DAC + real speaker",
+    "note": "documented reasoning; Phase 0 exists specifically to confirm it works, not yet measured"
+   }
+  ],
+  "honestLimit": "No frequency band, symbol timing, or guard interval is fixed anywhere yet — every phase after Phase 0 is explicitly blocked pending real measured hardware data.",
+  "research": true,
+  "featured": false
+ },
+ {
+  "id": "insightwell",
+  "title": "InsightWell",
+  "oneLiner": "Turns raw airline complaint text into clustered, scored root-cause categories with no manual tagging.",
+  "category": "AI/ML",
+  "status": "Shipped",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "BERTopic",
+   "RoBERTa (sentiment)",
+   "Next.js 16",
+   "React 19",
+   "Recharts"
+  ],
+  "repo": "https://github.com/kiruthick01/InsightWell.git",
+  "liveUrl": null,
+  "problem": "Support/ops teams need to know what customers are complaining about, how bad it is, and where to look first, but keyword-list tagging is manual and doesn't group complaints the way a human would.",
+  "approach": "A single linear Python pipeline embeds and clusters complaints with BERTopic, scores sentiment with a RoBERTa model, aggregates volume/trend/confidence per category into one static JSON artifact, and a fully static Next.js dashboard reads that artifact with no backend.",
+  "impact": [
+   {
+    "label": "Complaints processed",
+    "value": "14,640",
+    "note": "full Twitter US Airline Sentiment dataset run through the pipeline"
+   },
+   {
+    "label": "Sentiment model accuracy vs ground truth",
+    "value": "0.7719",
+    "note": "cardiffnlp RoBERTa model validated against the dataset's own human-labeled sentiment"
+   },
+   {
+    "label": "Largest root-cause category",
+    "value": "46.59% of volume (Customer Service)",
+    "note": "from the sample insights.json in the README's data contract"
+   },
+   {
+    "label": "Overall negative sentiment",
+    "value": "51.95%",
+    "note": "from the sample pipeline output shown in README"
+   }
+  ],
+  "honestLimit": "confidence_score and trend_score are stated proxy heuristics (the dataset's own labeled confidence; second-half volume share) rather than model-calibrated uncertainty or a fitted trend line.",
+  "research": false,
+  "featured": true
+ },
+ {
+  "id": "lancerscape",
+  "title": "LancerScape",
+  "oneLiner": "On-chain milestone escrow for freelancing with hybrid human-verified dispute resolution, testnet MVP.",
+  "category": "Full-Stack",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "Solidity 0.8.27",
+   "Hardhat",
+   "Next.js 16",
+   "Wagmi + RainbowKit",
+   "Express + MongoDB",
+   "Zod"
+  ],
+  "repo": "https://github.com/kiruthick01/Lancerscape.git",
+  "liveUrl": null,
+  "problem": "Centralized freelance escrow platforms hold funds with opaque, algorithmic or unaccountable dispute resolution, creating a single point of failure and no visibility into how fund decisions are made.",
+  "approach": "Client funds are locked in a Solidity escrow contract per milestone; a backend analyzes submitted evidence and an admin decides disputed outcomes, with the smart contract itself executing the resulting payment on Base Sepolia testnet.",
+  "impact": [
+   {
+    "label": "Smart contract test coverage",
+    "value": "6 Hardhat scenarios",
+    "note": "creation, funding, submission, approval, dispute, resolution"
+   },
+   {
+    "label": "Backend API tests",
+    "value": "Jest + Supertest suite",
+    "note": "validation tests across all documented endpoints"
+   },
+   {
+    "label": "Deployment target",
+    "value": "Base Sepolia testnet only",
+    "note": "README states explicitly: 'FOR TESTNET USE ONLY', unaudited"
+   }
+  ],
+  "honestLimit": "Explicitly a proof-of-concept MVP per its own README: no smart contract audit, no on-chain admin-role enforcement, and the AI dispute analysis is stubbed rather than a real model.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "marine-acoustic-monitor",
+  "title": "Marine Acoustic Monitor",
+  "oneLiner": "Edge-computed marine anomaly detector, simulation-validated end to end before any hardware is purchased.",
+  "category": "Embedded",
+  "status": "Simulation-validated",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "Librosa/SciPy",
+   "Isolation Forest",
+   "SQLite (WAL)",
+   "Raspberry Pi HAL (mock)",
+   "LoRa/cellular telemetry"
+  ],
+  "repo": "https://github.com/kiruthick01/Marine-Acoustic-Monitor.git",
+  "liveUrl": null,
+  "problem": "Monitoring marine ecosystems with human observers or connectivity-dependent systems is expensive, and a low-cost buoy or dock unit needs to flag anomalies locally without constant high-bandwidth connectivity.",
+  "approach": "On-device feature extraction combines acoustic (MFCC, spectral) and environmental (temperature, pH, turbidity, salinity) signals into one joint vector, fed to an unsupervised Isolation Forest anomaly detector — proven first entirely against synthetic hardware, with real production edge software runnable today in a mock-hardware mode.",
+  "impact": [
+   {
+    "label": "Anomaly precision (simulated)",
+    "value": "0.97",
+    "note": "Recall 0.69, F1 0.78; mean of 30 seeded runs. Synthetic anomalies vs synthetic background, no field data yet."
+   },
+   {
+    "label": "Vessel-type anomaly recall",
+    "value": "1.00 (precision 0.32 +/- 0.10)",
+    "note": "detector isn't type-aware, so precision is diluted"
+   },
+   {
+    "label": "Storm/environmental anomaly detection",
+    "value": "~0.05 precision/recall",
+    "note": "root-caused: 34 acoustic vs 8 environmental dims dilutes the signal; a measured candidate fix trades overall precision 0.97->0.72 for storm recall 0.05->0.59"
+   }
+  ],
+  "honestLimit": "No hardware has been purchased yet — every number here is from synthetic-vs-synthetic simulation with no real field or hardware validation, per the project's own locked DECISIONS.md.",
+  "research": true,
+  "featured": true
+ },
+ {
+  "id": "medicalog",
+  "title": "MedicaLog",
+  "oneLiner": "Server-first medication/condition tracker with constrained, non-clinical AI pattern awareness and full data control.",
+  "category": "Full-Stack",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "Next.js 16",
+   "TypeScript",
+   "Prisma + SQLite",
+   "NextAuth.js",
+   "Server Actions",
+   "constrained LLM analysis"
+  ],
+  "repo": "https://github.com/kiruthick01/MedicaLog.git",
+  "liveUrl": null,
+  "problem": "Health-tracking apps often over-collect data, bury users in unrequested 'insights', and give users no real way to reset, correct, or delete what's been stored.",
+  "approach": "A server-first Next.js app enforces ownership and transactional writes on every mutation, logs medication/meal data deterministically, and feeds only structured, deterministic features (never raw text) to an LLM that is explicitly barred from diagnosis, urgency, or recommendations.",
+  "impact": [
+   {
+    "label": "Feature phases completed",
+    "value": "14 phases",
+    "note": "medication CRUD through the doctor-access portal, per README's own project status"
+   },
+   {
+    "label": "Client-side JS footprint",
+    "value": "~30KB gzipped",
+    "note": "server-first architecture with minimal client boundaries, per README"
+   },
+   {
+    "label": "Doctor access model",
+    "value": "explicit per-request patient consent, revocable",
+    "note": "fully implemented request/approve/decline/revoke flow"
+   }
+  ],
+  "honestLimit": "Explicitly not a medical device and not clinically validated — the README frames it as a portfolio/educational project whose AI output is non-clinical pattern awareness only, not a tool for real patient decisions.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "mend",
+  "title": "Mend",
+  "oneLiner": "Offline-first Android scheduler that negotiates a realistic day with deterministic logic and an optional AI layer.",
+  "category": "Full-Stack",
+  "status": "In development",
+  "year": "2026",
+  "stack": [
+   "Kotlin",
+   "Jetpack Compose",
+   "Room",
+   "pure-Kotlin scheduling engine",
+   "Anthropic API (optional)"
+  ],
+  "repo": "https://github.com/kiruthick01/mend.git",
+  "liveUrl": null,
+  "problem": "A to-do list doesn't model the real shape of a day — fixed commitments, habits, and goal work competing for genuinely free time — and most schedulers either over-automate silently or don't adapt when reality changes.",
+  "approach": "A pure-Kotlin engine (no Android dependency, unit-tested on the JVM) lays down fixed blocks and habits, scores pending tasks by deadline/importance/reliability, and greedily packs the remainder into free time — proposing changes rather than silently rewriting the day; an optional, narrowly-scoped Anthropic integration only turns language into one of four pre-validated constraint shapes.",
+  "impact": [
+   {
+    "label": "Phases completed",
+    "value": "7 of the planned phases (0-7)",
+    "note": "per README's Current phase section, through natural-language parsing and offline degradation"
+   },
+   {
+    "label": "Engine isolation",
+    "value": "scheduling-engine module has zero Android dependency",
+    "note": "pure Kotlin, testable on the JVM with no emulator, per README architecture"
+   },
+   {
+    "label": "Minimum SDK",
+    "value": "API 26 (Android 8.0)",
+    "note": "deliberate floor for per-criticality notification channels and native java.time, per README"
+   }
+  ],
+  "honestLimit": "Explicitly pre-release: README states 'Not yet usable' as the current status, and alarms, notifications, and widgets are not yet built.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "prreq",
+  "title": "BERTopic Bug Fix (Open-Source Contribution)",
+  "oneLiner": "Root-caused and fixed a real bug in BERTopic's find_topics for list-valued search terms, with new tests.",
+  "category": "Tooling",
+  "status": "Shipped",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "BERTopic",
+   "sentence-transformers",
+   "pytest"
+  ],
+  "repo": "https://github.com/kiruthick01/BERTopic.git",
+  "liveUrl": null,
+  "problem": "BERTopic's find_topics wrapped a list search_term in an extra list before embedding it, so sentence-transformers' tokenizer fell through to its text-pair branch — a one-element list raised an IndexError, and a longer list silently encoded only the first two terms as a pair.",
+  "approach": "Normalized search_term to a list of strings up front, averaged the resulting per-term embeddings into a single query embedding (a no-op for a single string), and added explicit errors for empty lists or non-string entries.",
+  "impact": [
+   {
+    "label": "Root cause identified",
+    "value": "sentence-transformers tokenize() text-pair fallback on nested lists",
+    "note": "documented in the commit message"
+   },
+   {
+    "label": "Tests added",
+    "value": "55 new lines in test_representations.py",
+    "note": "from the commit's own diffstat"
+   },
+   {
+    "label": "Upstream issues addressed",
+    "value": "Fixes #2475, #2392",
+    "note": "referenced directly in the commit message"
+   }
+  ],
+  "honestLimit": "This is a single fix commit on a personal fork against upstream MaartenGr/BERTopic; whether the pull request was accepted upstream isn't recorded in this repository.",
+  "research": false,
+  "featured": false
+ },
+ {
+  "id": "snitchwatt",
+  "title": "Snitchwatt",
+  "oneLiner": "From-scratch TVLA side-channel leakage auditor, validated against simulated power traces with a real threshold.",
+  "category": "Security",
+  "status": "Simulation-validated",
+  "year": "2026",
+  "stack": [
+   "Python",
+   "NumPy",
+   "Welch's t-test (SciPy)",
+   "Matplotlib",
+   "pytest"
+  ],
+  "repo": "https://github.com/kiruthick01/SnitchWatt.git",
+  "liveUrl": null,
+  "problem": "Determining whether a cryptographic device's power consumption leaks secret-dependent information usually requires lab equipment and proprietary tooling; TVLA is the published methodology real hardware-security labs use, but it needs a correctly-implemented statistical engine to trust.",
+  "approach": "Implements the standard TVLA protocol — Welch's t-test per time sample between fixed and random trace groups, flagged at the published |t|>4.5 threshold — against a Hamming-weight-plus-Gaussian-noise trace simulator, with the trace source fully abstracted so a real oscilloscope capture can plug in later with zero engine changes.",
+  "impact": [
+   {
+    "label": "Leak stat, unprotected (flag at >4.5)",
+    "value": "129.96",
+    "note": "FLAGGED. The masked implementation scores 3.34 and passes; one with a residual leak scores 4.98 and is caught."
+   },
+   {
+    "label": "Masked implementation",
+    "value": "PASS, max|t| = 3.34",
+    "note": "clean simulated countermeasure, no data-dependent component"
+   },
+   {
+    "label": "Masked with residual leak",
+    "value": "FLAGGED, max|t| = 4.98",
+    "note": "correctly detects a smaller residual leak vs the fully unprotected profiles"
+   },
+   {
+    "label": "TVLA threshold used",
+    "value": "|t| > 4.5",
+    "note": "the standard published TVLA pass/fail threshold, ~99.999% confidence"
+   }
+  ],
+  "honestLimit": "Runs entirely on simulated Hamming-weight power traces — no real hardware, oscilloscope, or target device has been tested; hardware integration via a ChipWhisperer-Nano is deferred, per README's own roadmap.",
+  "research": true,
+  "featured": true
+ },
+ {
+  "id": "weir",
+  "title": "Weir",
+  "oneLiner": "Admission control for overloaded human approvers: live pressure, bounded queues, agent proposals under a deterministic policy.",
+  "category": "Full-Stack",
+  "status": "Working prototype",
+  "year": "2026",
+  "stack": [
+   "Python 3.13",
+   "FastAPI",
+   "SQLAlchemy/SQLite",
+   "Claude API (optional agent)",
+   "vanilla JS dashboard",
+   "Prometheus metrics"
+  ],
+  "repo": "https://github.com/kiruthick01/Weir.git",
+  "liveUrl": null,
+  "problem": "Approval workflows (procurement, expense, access requests) treat a slow human approver as an inbox-design problem, so requests silently pile up under overload with no live signal until someone escalates.",
+  "approach": "Each approver's live pressure state (Normal/Elevated/Critical) is computed from a rolling decision-latency window with hysteresis; under sustained Critical pressure, either a deterministic offline policy or a Claude-driven governance agent proposes delegation/auto-approval, but every proposal — from either mode — must pass a separate deterministic validator before it touches the ledger.",
+  "impact": [
+   {
+    "label": "Test suite",
+    "value": "10 tests passing",
+    "note": "policy engine plus full FastAPI request lifecycle, per README"
+   },
+   {
+    "label": "Pressure model",
+    "value": "Normal -> Elevated -> Critical with hysteresis",
+    "note": "computed from both resolved-decision latency and live queue-wait time"
+   },
+   {
+    "label": "Governance modes",
+    "value": "offline deterministic stand-in and live Claude-driven proposals",
+    "note": "both routed through the same policy_engine.validate_proposal before any ledger write"
+   }
+  ],
+  "honestLimit": "README's own roadmap lists Postgres, a Redis-backed shared state store, and real authentication/authorization as not yet built — the current state store is single-process SQLite, not production-scale.",
+  "research": true,
+  "featured": false
+ }
+]
