@@ -1,9 +1,5 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img src="assets/banner-light.svg" alt="Lab notebook: I build systems, then measure how far they can be trusted" width="900" />
-</picture>
 
 <table>
   <tr>
@@ -41,10 +37,6 @@
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/elements-dark.svg">
-  <img src="assets/elements-light.svg" alt="Periodic table of skills" width="900" />
-</picture>
 
 <sub>Each figure is copied from the repo it belongs to, with its limits noted there. Full write-ups with what each project proves, and what it does not: <a href="https://kiruthicklocksin.vercel.app">kiruthicklocksin.vercel.app</a></sub>
 
