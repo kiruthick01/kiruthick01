@@ -20,24 +20,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-kiruthickkannaa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kiruthickkannaa)
 [![Email](https://img.shields.io/badge/Email-kiruthickkannaa@gmail.com-2c4d9c?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kiruthickkannaa@gmail.com)
 
-<br><br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/experiments-dark.svg">
-  <img src="assets/experiments-light.svg" alt="Featured experiments with headline figures" width="900" />
-</picture>
-
-**Read the write-ups:**
-[TADRO](https://github.com/kiruthick01/terrain-aware-drainage-route-optimization) ·
-[TVBAO](https://github.com/kiruthick01/Thermal-Vision-Based-Airflow-Optimization) ·
-[AquaNexus](https://github.com/kiruthick01/AquaNexus) ·
-[InsightWell](https://github.com/kiruthick01/InsightWell) ·
-[Snitchwatt](https://github.com/kiruthick01/SnitchWatt) ·
-[Marine Acoustic Monitor](https://github.com/kiruthick01/Marine-Acoustic-Monitor)
-
 <br>
-
-
-<sub>Each figure is copied from the repo it belongs to, with its limits noted there. Full write-ups with what each project proves, and what it does not: <a href="https://kiruthicklocksin.vercel.app">kiruthicklocksin.vercel.app</a></sub>
 
 </div>
